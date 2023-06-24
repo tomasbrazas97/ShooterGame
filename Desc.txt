@@ -1,1 +1,6 @@
-Description
+Description of the project:
+
+Efficient and fast 2D raycaster.
+Shooter game programmed with python using pygames. Project is based on the raycasting algorithm; 
+in reality it is performed on a 2D plane but allows user to experience a 3D illusion of space (Pseudo 3D).
+
