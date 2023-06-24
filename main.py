@@ -1,6 +1,7 @@
 import pygame as pg
 import sys
 from settings import *
+from map import *
 
 class Game:
     #methods
@@ -8,9 +9,10 @@ class Game:
         pg.init()
         self.screen = pg.display.set_mode(RES) #screen for resolution
         self.clock = pg.time.Clock()
+        self.new_game()
 
     def new_game(self):
-        pass #empty for now
+       self.map = Map(self)
 
     def update(self): #update screen and display current frames in window caption
         pg.display.flip()
@@ -19,6 +21,7 @@ class Game:
 
     def draw(self): #each iteration paint screen black
         self.screen.fill('black')
+        self.map.draw()
 
     def check_events(self): #Check if user presses closes window or presses esc
         for event in pg.event.get():
@@ -32,7 +35,7 @@ class Game:
             self.update()
             self.draw()
 
-if __name__ == '__main__':
+if __name__ == '__main__': #instance of game
     game = Game()
     game.run()    
     
