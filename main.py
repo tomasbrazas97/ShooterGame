@@ -28,8 +28,8 @@ class Game:
 
     def draw(self): #each iteration paint screen black
         self.screen.fill('black')
-        self.map.draw()
-        self.player.draw()
+       # self.map.draw()
+        #self.player.draw()
 
     def check_events(self): #Check if user presses closes window or presses esc
         for event in pg.event.get():
